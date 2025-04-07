@@ -28,3 +28,49 @@
 //     assert nums[i] == expectedNums[i];
 // }
 // If all assertions pass, then your solution will be accepted.
+
+var removeElement = function (nums, val) {
+	console.log(nums.length);
+
+	for (var i = 0; i <= nums.length; i++) {
+		if (nums[i] === val) {
+			nums.splice(i, 1);
+			i--; // Decrement i to account for the removed element
+		}
+	}
+
+	console.log(nums);
+	return nums.length;
+};
+var removeElementOptimal = function (nums, val) {
+	// This is a more efficient solution that uses two pointers
+	// Time complexity: O(n)
+	// Space complexity: O(1)
+	let i = 0;
+
+	// Iterate through the array
+	for (let j = 0; j < nums.length; j++) {
+		// If the current element is not equal to val,
+		// place it at the i-th position and increment i
+		// This effectively moves all elements not equal to val
+		// to the front of the array
+		// and keeps track of the new length of the array
+		if (nums[j] !== val) {
+			nums[i] = nums[j];
+			i++;
+		}
+	}
+	console.log(nums);
+
+	return i;
+};
+
+module.exports = {
+	removeElement,
+	removeElementOptimal,
+};
+
+nums = [0, 1, 2, 2, 3, 0, 4, 2];
+val = 2;
+console.log(removeElement(nums, val));
+console.log(removeElementOptimal(nums, val));
