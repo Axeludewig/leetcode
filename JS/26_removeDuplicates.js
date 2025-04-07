@@ -97,3 +97,8 @@ nums = [-1, 0, 0, 0, 0, 3, 3];
 
 console.log(removeDuplicates(nums)); // Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
 console.log(removeDuplicatesOptimal(nums)); // Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+
+module.exports = {
+	removeDuplicates,
+	removeDuplicatesOptimal,
+};
