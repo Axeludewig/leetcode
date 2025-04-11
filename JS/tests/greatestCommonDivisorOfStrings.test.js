@@ -1,4 +1,4 @@
-const gcdOfStrings = require("../1078_greatestCommonDivisorOfStrings");
+const gcdOfStrings = require("../1071_greatestCommonDivisorOfStrings");
 
 describe("gcdOfStrings", () => {
 	test("should return the correct common divisor for equal base", () => {

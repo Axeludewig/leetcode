@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-require_once __DIR__ . '/../src/1078_greatestCommonDivisorOfStrings.php';
+require_once __DIR__ . '/../src/1071_greatestCommonDivisorOfStrings.php';
 
 class GreatestCommonDivisorOfStringsTest extends TestCase
 {
